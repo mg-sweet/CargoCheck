@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"> <!-- နောက်ခံကို Theme အလိုက်ပြောင်းရန် -->
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- Premium Top Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="15dp"
+            app:cardBackgroundColor="?attr/colorSurface"
+            android:layout_marginBottom="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:paddingHorizontal="8dp"
+                >
+
+                <!-- Back Button -->
+                <ImageButton
+                    android:id="@+id/btnBackOB"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@android:drawable/ic_menu_revert"
+                    app:tint="?android:attr/textColorPrimary" /> <!-- Icon ကို Theme အလိုက်ပြောင်းရန် -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="OB Data Checker"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary"/> <!-- စာသားကို Theme အလိုက်ပြောင်းရန် -->
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <!-- 1. CARGO SECTION -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <Button
+                            android:id="@+id/btnImportCargo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1. Import Cargo File"
+                            app:cornerRadius="12dp"
+                            app:backgroundTint="#EF6C00"/>
+                        <TextView
+                            android:id="@+id/tvCargoFileStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No file selected"
+                            android:textSize="11sp"
+                            android:textColor="#757575"
+                            android:layout_marginTop="4dp"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginEnd="4dp"
+                                android:hint="Waybill Col">
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCargoWaybill"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"
+                                    android:textSize="13sp"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:ellipsize="end"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="0dp"
+                                    android:textColor="?android:attr/textColorPrimary"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginStart="4dp"
+                                android:hint="Filter Col">
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoCargoFilter"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"
+                                    android:textSize="13sp"
+                                    android:maxLines="1"
+                                    android:singleLine="true"
+                                    android:ellipsize="end"
+                                    android:paddingStart="8dp"
+                                    android:paddingEnd="0dp"
+                                    android:textColor="?android:attr/textColorPrimary"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupCargoFilter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:chipSpacing="8dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 2. OB SECTION -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="?attr/colorSurface"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <Button
+                            android:id="@+id/btnImportOb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2. Import OB File"
+                            app:cornerRadius="12dp"
+                            app:backgroundTint="#EF6C00"/>
+                        <TextView
+                            android:id="@+id/tvObFileStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No file selected"
+                            android:textSize="11sp"
+                            android:textColor="#757575"
+                            android:layout_marginTop="4dp"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="sans-serif-medium"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Waybill Col">
+                                <AutoCompleteTextView
+                                    android:id="@+id/autoObWaybill"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"
+                                    android:textSize="13sp"
+                                    android:textColor="?android:attr/textColorPrimary"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Data Preview Areas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="4dp">
+                    <TextView android:id="@+id/tvCargoCount" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Cargo (0)" android:textStyle="bold" android:gravity="center_horizontal" android:textColor="?android:attr/textColorPrimary"/>
+                    <TextView android:id="@+id/tvObCount" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="Outbound (0)" android:textStyle="bold" android:gravity="center_horizontal" android:textColor="?android:attr/textColorPrimary"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp">
+
+                    <TextView android:id="@+id/tvCargoData"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_preview_box"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:scrollbars="vertical"
+                        android:textIsSelectable="true"
+                        android:textColor="?android:attr/textColorPrimary"/>
+
+                    <View android:layout_width="8dp" android:layout_height="match_parent"/>
+
+                    <TextView android:id="@+id/tvObData"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_preview_box"
+                        android:padding="8dp"
+                        android:textSize="12sp"
+                        android:scrollbars="vertical"
+                        android:textIsSelectable="true"
+                        android:textColor="?android:attr/textColorPrimary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:text="Check Duplicates"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="#1565C0"
+            app:cornerRadius="12dp"/>
+    </LinearLayout>
+</FrameLayout>

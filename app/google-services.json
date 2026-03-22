@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885292603924",
+    "project_id": "datacheck-login",
+    "storage_bucket": "datacheck-login.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885292603924:android:c34b554d4f757f0d382501",
+        "android_client_info": {
+          "package_name": "com.sweet.cargocheck"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA71sRsNzDz7XFR_GNcjlZGrQnGfKWZzNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

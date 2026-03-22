@@ -1,0 +1,15 @@
+<resources>
+    <style name="Theme.CargoCheck" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- ပင်မအရောင် (Dark မှာ မြင်သာအောင် Blue ဖျော့ဖျော့လေး သုံးပါမယ်) -->
+        <item name="colorPrimary">#1565C0</item>
+        <item name="colorOnPrimary">#000000</item>
+
+        <!-- Background နှင့် Card အရောင် (Dark Mode) -->
+        <item name="android:windowBackground">#121212</item> <!-- အနက်ရောင်ရင့်ရင့် -->
+        <item name="colorSurface">#1E1E1E</item> <!-- Card ကို အနက်ဖျော့ (Elevation ပေါ်အောင်) -->
+
+        <!-- စာသားအရောင်များ -->
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#B0B0B0</item>
+    </style>
+</resources>

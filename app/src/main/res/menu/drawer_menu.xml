@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- ပင်မ လုပ်ဆောင်ချက်များ -->
+    <group android:id="@+id/main_group" android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ib"
+            android:icon="@drawable/ic_consignment_in"
+            android:title="IB Checking" />
+        <item
+            android:id="@+id/nav_ob"
+            android:icon="@drawable/ic_consignment_out"
+            android:title="OB Checking" />
+        <item
+            android:id="@+id/nav_qr"
+            android:icon="@drawable/ic_qr_generator"
+            android:title="QR Generator" />
+    </group>
+
+    <!-- အခြားမှတ်တမ်းများ -->
+    <item android:title="History &amp; Info">
+        <menu>
+            <item
+                android:id="@+id/nav_save"
+                android:icon="@android:drawable/ic_menu_save"
+                android:title="Saved History" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@android:drawable/ic_menu_info_details"
+                android:title="REX Check User Guide" />
+        </menu>
+    </item>
+
+    <!-- Settings နှင့် Account ပိုင်း -->
+    <item android:title="Account Settings">
+        <menu>
+            <item
+                android:id="@+id/nav_copy_toggle"
+                android:title="Touch to Copy"
+                app:actionViewClass="android.widget.Switch" />
+            <item
+                android:id="@+id/nav_change_pw"
+                android:icon="@android:drawable/ic_secure"
+                android:title="Change Password" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Log out" />
+        </menu>
+    </item>
+
+</menu>

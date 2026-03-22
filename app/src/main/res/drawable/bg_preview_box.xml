@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- နောက်ခံအရောင် (Theme အလိုက် အဖြူ သို့မဟုတ် အမည်း ဖြစ်သွားမည်) -->
+    <solid android:color="?attr/colorSurface" />
+
+    <!-- ဘောင်အရောင် (Theme အလိုက် မီးခိုးဖျော့ သို့မဟုတ် မီးခိုးရင့် ဖြစ်သွားမည်) -->
+    <stroke
+        android:width="1dp"
+        android:color="?android:attr/textColorSecondary" />
+
+    <!-- ထောင့်လေးတွေကို CardView နဲ့ လိုက်ဖက်အောင် ဝိုင်းခြင်း -->
+    <corners android:radius="8dp" />
+</shape>

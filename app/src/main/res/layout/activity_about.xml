@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/windowBackground"
+    android:id="@+id/main">
+
+    <!-- Brand Header (ဒီအပိုင်းကတော့ Company Color ဖြစ်လို့ အဝါအတိုင်းထားတာ ပိုလှပါတယ်) -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="0dp">
+
+        <!-- FrameLayout ကို သုံးပြီး တစ်ခုပေါ်တစ်ခု ထပ်ပါမယ် -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#FFD600">
+
+            <!-- ၁။ Logo ကို အောက်ခြေ layer အနေနဲ့ ထားပါမယ် (အကြီးကြီး ထားလို့ရပါပြီ) -->
+            <ImageView
+                android:id="@+id/ivAboutLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/royal_logo_foreground"
+                android:scaleType="centerInside"
+                android:alpha="0.8" /> <!-- စာသား ပိုပေါ်အောင် ပုံကို နည်းနည်း မှိန်ထားလို့ရပါတယ် -->
+
+            <!-- ၂။ စာသားကို အပေါ် layer ကနေ တင်ပါမယ် -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REX Check User Guide"
+                android:textColor="#FF0000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="#66FFD600"
+                android:paddingHorizontal="8dp" />
+
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- OB Checking Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OB Checking (Cargo VS OB)"
+                android:textColor="#D32F2F"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Cargo Side Errors Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check in Cargo"
+                        android:textStyle="bold"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:layout_marginBottom="8dp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• [Type 1] : Sticker Waybill ပုံမှန် No Data ဖြစ်ခြင်း။\n\n• [Type 2] : Digital Pattern များဖြစ်သည်။ OB Date မှားယွင်းခြင်း သို့မဟုတ် To City Code ပြင်ထားပြီး Waybill အဟောင်းအတိုင်း Cargo သုံးထားခြင်း ဖြစ်နိုင်သည်။\n\n• [Type 3] : Extra Care/International ပါဆယ်များဖြစ်သည်။ OB Update မရိုက်နိုင်သေးသည့် အခြေအနေဖြစ်သည်။"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- OB Side Errors Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check in OB"
+                        android:textStyle="bold"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:layout_marginBottom="8dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• [Type 1: No Cargo] : Cargo မသုံးထားသော စာစောင်များဖြစ်သည်။\n\n• [Type 2: No Cargo] : Digital Waybill များဖြစ်သည်။ လိုင်းမကောင်း၍ ၂ စောင်ထွက်ခြင်း ဖြစ်နိုင်သဖြင့် Cus Info/POD စစ်ဆေးပါ။\n\n• [Type 3: No Cargo] : Ecode/Digital များဖြစ်သည်။ POD Image ပြန်လည်စစ်ဆေးရန် လိုအပ်သည်။\n\n• [Type 4] : EC/ITs အစောင်များ Update စာရင်းသွင်းရန် ကျန်ရှိနေခြင်း ဖြစ်နိုင်သည်။"
+                        android:textColor="?android:attr/textColorSecondary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- IB Section Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IB Checking (Delivery VS Pending)"
+                android:textColor="#2E7D32"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:layout_marginBottom="8dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[Pending Data Left]"
+                        android:textStyle="bold"
+                        android:textColor="#D32F2F"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="• Inventory (Inv) တွင် စာရင်းသွင်းရန် ကျန်ခဲ့ခြင်းဖြစ်သည်။\nအရင်ဆုံး Digital တွင်စစ်ဆေးပါ။\nမိမိမြို့အမှန်ဖြစ်ပါက ပါဆယ်ရှာဖွေ၍ Inv စာရင်းအမှန် ပြန်သွင်းပါ။"
+                        android:textSize="14sp"
+                        android:textColor="?android:attr/textColorSecondary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[Not in System]"
+                        android:textStyle="bold"
+                        android:textColor="#D32F2F"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="• Type 1: Wrong City (မြို့မကိုက်ညီခြင်း)\n• Type 2: No Data (စာရင်းမသွင်းရသေးခြင်း)\n• Type 3: Wrong Waybill (Waybill နံပါတ်အမှား)\n\nအထက်ပါ error များအတွက် Ticket တင်ရန် သို့မဟုတ် သက်ဆိုင်ရာ OA/Supervisor များနှင့် ချိတ်ဆက်ပါ။"
+                        android:textSize="14sp"
+                        android:textColor="?android:attr/textColorSecondary"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- App Version -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ROYAL EXPRESS - Logistics Analytics\nDeveloped by ThetPaingHtoo\nVersion 1.0.0"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="12sp"
+                android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
