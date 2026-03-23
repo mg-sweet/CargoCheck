@@ -17,7 +17,7 @@
         <!-- FrameLayout ကို သုံးပြီး တစ်ခုပေါ်တစ်ခု ထပ်ပါမယ် -->
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="110dp"
             android:background="#FFD600">
 
             <!-- ၁။ Logo ကို အောက်ခြေ layer အနေနဲ့ ထားပါမယ် (အကြီးကြီး ထားလို့ရပါပြီ) -->
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:text="REX Check User Guide"
                 android:textColor="#FF0000"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textStyle="bold"
                 android:shadowColor="#40000000"
                 android:shadowDx="3"
@@ -66,7 +66,11 @@
                 android:textColor="#D32F2F"
                 android:textStyle="bold"
                 android:textSize="17sp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:shadowColor="#40000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"/>
 
             <!-- Cargo Side Errors Card -->
             <com.google.android.material.card.MaterialCardView
@@ -143,7 +147,11 @@
                 android:textColor="#2E7D32"
                 android:textStyle="bold"
                 android:textSize="17sp"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:shadowColor="#40000000"
+                android:shadowDx="3"
+                android:shadowDy="3"
+                android:shadowRadius="3"/>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
